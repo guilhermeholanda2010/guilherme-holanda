@@ -6,7 +6,7 @@ import { WorktreePanel } from '../components/WorktreePanel';
 export function HowIWork() {
   return (
     <Section id="how-i-work" heading={howIWork.heading}>
-      <div className="mt-8 grid items-start gap-x-16 gap-y-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
+      <div className="mt-8 grid grid-cols-[minmax(0,1fr)] items-start gap-x-16 gap-y-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
         <Reveal>
           <p className="lead-display">{howIWork.intro}</p>
           <div className="mt-6 max-w-[var(--measure)] space-y-4">

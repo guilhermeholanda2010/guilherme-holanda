@@ -254,6 +254,7 @@
   .case-study {
     display: grid;
     gap: 2.5rem 4.5rem;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-areas: 'head' 'stats' 'body';
   }
 
@@ -267,7 +268,7 @@
 
   .stats {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr));
     gap: 1.75rem 1.25rem;
     align-content: start;
   }
@@ -288,6 +289,10 @@
   /* Non-counting values (ranges) are wider; give them the full row on small screens. */
   .stat[data-wide='true'] {
     grid-column: 1 / -1;
+  }
+
+  .stat[data-wide='true'] .stat-value {
+    white-space: normal;
   }
 
   @media (min-width: 768px) {
