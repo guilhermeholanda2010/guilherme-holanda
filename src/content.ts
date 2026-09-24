@@ -85,7 +85,7 @@ export const site = {
   url: 'https://guilherme-holanda.vercel.app',
   title: 'Guilherme Holanda, Senior Software Engineer',
   description:
-    'Senior software engineer building backend and full stack products in TypeScript. Messaging, payments and AI integrations for healthcare businesses across Brazil.',
+    'Senior software engineer building backend and full stack products. Messaging, payments and AI integrations for healthcare businesses across Brazil.',
   ogImage: '/og-image.png',
   ogImageAlt: 'Guilherme Holanda, Senior Software Engineer',
   skipLink: 'Skip to content',
@@ -107,7 +107,7 @@ export const site = {
 export const hero = {
   status: 'Currently Senior Software Engineer at Amigo Tech.',
   headline: identity.name,
-  lead: 'Senior software engineer building backend and full stack products in TypeScript.',
+  lead: 'Senior software engineer building backend and full stack products.',
   supporting:
     'I work on messaging, payments and AI integrations for healthcare businesses across Brazil, and I like the parts where the volume gets real.',
   actions: [
