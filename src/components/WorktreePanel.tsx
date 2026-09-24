@@ -1,4 +1,4 @@
-import { AnimatePresence, motion, useInView } from 'motion/react';
+import { AnimatePresence, m, useInView } from 'motion/react';
 import { Check } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import type { Worktree } from '../content';
@@ -79,10 +79,10 @@ function WorktreeRow({ worktree, active, reduced, onDone }: RowProps) {
   return (
     <li className="panel-row" data-done={isDone}>
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-        <span className="text-ink">{worktree.branch}</span>
+        <span className="min-w-0 break-all text-ink">{worktree.branch}</span>
         <span className="relative shrink-0">
           <AnimatePresence mode="popLayout" initial={false}>
-            <motion.span
+            <m.span
               key={status}
               className={`inline-flex items-center gap-1.5 ${isDone ? 'text-ok' : 'text-muted'}`}
               initial={{ opacity: 0, y: 4 }}
@@ -92,12 +92,12 @@ function WorktreeRow({ worktree, active, reduced, onDone }: RowProps) {
             >
               {isDone && <Check aria-hidden="true" className="size-3.5" strokeWidth={2.5} />}
               {status}
-            </motion.span>
+            </m.span>
           </AnimatePresence>
         </span>
       </div>
       <div className="panel-track" aria-hidden="true">
-        <motion.span
+        <m.span
           className="panel-fill"
           initial={{ scaleX: reduced ? 1 : 0 }}
           animate={{ scaleX: reduced || active ? 1 : 0 }}
@@ -108,7 +108,7 @@ function WorktreeRow({ worktree, active, reduced, onDone }: RowProps) {
             onDone();
           }}
         />
-        <motion.span
+        <m.span
           className="panel-fill panel-fill-done"
           initial={false}
           animate={{ opacity: isDone ? 1 : 0 }}

@@ -3,7 +3,7 @@ import '@fontsource-variable/instrument-sans/wght.css';
 import '@fontsource-variable/jetbrains-mono/wght.css';
 import './styles/global.css';
 
-import { MotionConfig } from 'motion/react';
+import { domAnimation, LazyMotion, MotionConfig } from 'motion/react';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { App } from './App';
@@ -14,10 +14,12 @@ if (!root) throw new Error('Missing #root element');
 
 createRoot(root).render(
   <StrictMode>
-    <MotionConfig reducedMotion="user">
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
-    </MotionConfig>
+    <LazyMotion features={domAnimation} strict>
+      <MotionConfig reducedMotion="user">
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
+      </MotionConfig>
+    </LazyMotion>
   </StrictMode>,
 );

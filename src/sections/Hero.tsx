@@ -1,4 +1,4 @@
-import { motion, type Variants } from 'motion/react';
+import { m, type Variants } from 'motion/react';
 import type { Ref } from 'react';
 import { hero, identity, isSet } from '../content';
 import { ActionLinkView } from '../components/ActionLinkView';
@@ -23,31 +23,28 @@ export function Hero({ ref }: { ref?: Ref<HTMLElement> }) {
   return (
     <section ref={ref} id="top" aria-labelledby="hero-heading" className="hero">
       <Container>
-        <motion.div variants={group} initial={reduced ? false : 'hidden'} animate="shown">
-          <motion.p
-            variants={item}
-            className="flex items-start gap-2.5 text-[0.9375rem] text-muted"
-          >
+        <m.div variants={group} initial={reduced ? false : 'hidden'} animate="shown">
+          <m.p variants={item} className="flex items-start gap-2.5 text-[0.9375rem] text-muted">
             <span
               aria-hidden="true"
               className="mt-[0.5625rem] size-2 shrink-0 rounded-full bg-ok"
             />
             {hero.status}
-          </motion.p>
+          </m.p>
 
-          <motion.h1 variants={item} id="hero-heading" className="h-hero mt-6">
+          <m.h1 variants={item} id="hero-heading" className="h-hero mt-6">
             {hero.headline}
-          </motion.h1>
+          </m.h1>
 
-          <motion.p variants={item} className="hero-lead mt-6">
+          <m.p variants={item} className="hero-lead mt-6">
             {hero.lead}
-          </motion.p>
+          </m.p>
 
-          <motion.p variants={item} className="mt-5 max-w-[60ch] text-muted">
+          <m.p variants={item} className="mt-5 max-w-[60ch] text-muted">
             {hero.supporting}
-          </motion.p>
+          </m.p>
 
-          <motion.div variants={item} className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-4">
+          <m.div variants={item} className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-4">
             <div className="flex flex-wrap gap-3">
               {actions
                 .filter((action) => action.kind !== 'text')
@@ -62,12 +59,12 @@ export function Hero({ ref }: { ref?: Ref<HTMLElement> }) {
                   <ActionLinkView key={action.label} link={action} />
                 ))}
             </div>
-          </motion.div>
+          </m.div>
 
-          <motion.p variants={item} className="mt-8 text-[0.9375rem] text-muted">
+          <m.p variants={item} className="mt-8 text-[0.9375rem] text-muted">
             {identity.location}
-          </motion.p>
-        </motion.div>
+          </m.p>
+        </m.div>
       </Container>
     </section>
   );

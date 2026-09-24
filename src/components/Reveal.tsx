@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { m } from 'motion/react';
 import type { ReactNode } from 'react';
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
 import { EASE_OUT } from './motion';
@@ -28,7 +28,7 @@ export function Reveal({
       </Tag>
     );
   }
-  const Tag = motion[as];
+  const Tag = m[as];
   return (
     <Tag
       className={className}
