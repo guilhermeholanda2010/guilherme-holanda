@@ -81,8 +81,8 @@ export const identity = {
 } as const;
 
 export const site = {
-  // TODO: set to the production URL (no trailing slash). Until then canonical and og:url are omitted.
-  url: TODO,
+  // Production origin, no trailing slash. Swap for the custom domain once it exists (see README).
+  url: 'https://guilherme-holanda.vercel.app',
   title: 'Guilherme Holanda, Senior Software Engineer',
   description:
     'Senior software engineer building backend and full stack products in TypeScript. Messaging, payments and AI integrations for healthcare businesses across Brazil.',

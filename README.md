@@ -4,7 +4,7 @@
 
 Personal website of Guilherme Holanda, Senior Software Engineer (backend and full stack). A single, text-only page: selected work at Amigo Tech, a personal project, how I work, experience and contact. Light and dark themes, a few purposeful animations that respect `prefers-reduced-motion`, and a Lighthouse score of 95+ in every category on mobile.
 
-**Live:** LIVE_URL
+**Live:** https://guilherme-holanda.vercel.app
 
 ![The site in light and dark themes](docs/screenshot.png)
 
