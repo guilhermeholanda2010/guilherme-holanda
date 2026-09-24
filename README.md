@@ -47,7 +47,7 @@ All copy, numbers and links live in [`src/content.ts`](src/content.ts), fully ty
 
 - Any link set to `TODO` is hidden. Set `identity.github` to show the GitHub links.
 - Numbers use `{ prefix, value, suffix }` so they can count up; use `display` for values that shouldn't (like a range).
-- Drop the PDFs into `public/` as `resume-guilherme-holanda.pdf` and `portfolio-guilherme-holanda.pdf`.
+- The résumé and portfolio PDFs live in `public/`. Short links `/resume` (or `/cv`) and `/portfolio` redirect to them, configured in `vercel.json`.
 
 ## Project layout
 
