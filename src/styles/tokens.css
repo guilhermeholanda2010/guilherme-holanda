@@ -1,0 +1,38 @@
+/*
+ * Design tokens. Light is the default; dark applies via [data-theme='dark'],
+ * which the inline script in index.html sets before first paint.
+ * Contrast (WCAG 2.x): every text pair here is AA or better on --bg and --surface.
+ */
+:root {
+  --bg: oklch(97.2% 0.003 128.5);
+  --surface: oklch(99.4% 0.002 128.5);
+  --ink: oklch(21.2% 0.009 255.6);
+  --muted: oklch(48.9% 0.018 251.3);
+  --line: oklch(89.4% 0.007 132.4);
+  --accent: oklch(46.6% 0.172 263.7);
+  --ok: oklch(51.5% 0.112 156.4);
+
+  --header-bg: oklch(97.2% 0.003 128.5 / 0.82);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --measure: 68ch;
+  --content: 1080px;
+  --gutter: clamp(1rem, 0.6rem + 2vw, 2rem);
+  --header-h: 3.5rem;
+
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --bg: oklch(20.4% 0.009 264.4);
+  --surface: oklch(24.3% 0.012 264.3);
+  --ink: oklch(93.3% 0.005 258.3);
+  --muted: oklch(70.9% 0.017 253.9);
+  --line: oklch(30.9% 0.015 264.3);
+  --accent: oklch(76.3% 0.12 265.4);
+  --ok: oklch(78.6% 0.121 158.3);
+
+  --header-bg: oklch(20.4% 0.009 264.4 / 0.8);
+
+  color-scheme: dark;
+}
