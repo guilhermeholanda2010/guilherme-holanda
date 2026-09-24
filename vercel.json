@@ -3,6 +3,10 @@
   "redirects": [
     { "source": "/resume", "destination": "/resume-guilherme-holanda.pdf", "permanent": false },
     { "source": "/cv", "destination": "/resume-guilherme-holanda.pdf", "permanent": false },
-    { "source": "/portfolio", "destination": "/portfolio-guilherme-holanda.pdf", "permanent": false }
+    {
+      "source": "/portfolio",
+      "destination": "/portfolio-guilherme-holanda.pdf",
+      "permanent": false
+    }
   ]
 }
